@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>🌡️Temperature Converter</h2>
+    <input type="number" id="tempInput" placeholder="Enter temperature: " />
+    <select id="fromUnit">
+      <option value="Celsius">Celsius (°C)</option>
+      <option value="Fahrenheit">Fahrenheit (°F)</option>
+      <option value="Kelvin">Kelvin (K)</option>
+      <option value="Rankine">Rankine (°R)</option>
+    </select>
+    <select id="toUnit">
+      <option value="Celsius">Celsius (°C)</option>
+      <option value="Fahrenheit">Fahrenheit (°F)</option>
+      <option value="Kelvin">Kelvin (K)</option>
+      <option value="Rankine">Rankine (°R)</option>
+    </select>
+    <button onclick="convertTemp()">Convert</button>
+    <p id="result">Click 'Convert' to see the result!</p>
+    <footer>
+      <p>Made with ❤️ by <strong>Gopal Mahato</strong> | &copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
