@@ -1,0 +1,41 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.bmi-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  background: #2f80ed;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1b5fcc;
+}
+.result {
+  margin-top: 15px;
+}
