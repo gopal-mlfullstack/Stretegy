@@ -42,8 +42,8 @@
 **Hours:**
 - Day 01 Monday 27 October [~6]
 - Day 02 Tuesday 28 October [~6.5]
-- Day 03 Wednesday 29 October []
-- Day 04 Thursday 30 October []
+- Day 03 Wednesday 29 October [~5]
+- Day 04 Thursday 30 October [~4]
 - Day 05 Friday 31 October []
 - Day 06 Saturday 01 November []
 - Day 07 Sunday 02 november []
