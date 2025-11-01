@@ -116,7 +116,7 @@ console.log(board);
 
 
 // Functions in JavaScript
-
+/*
 const square = function(x) {
     return x * x;
 }
@@ -126,5 +126,72 @@ const makeNoise = function() {
     return "Pling!"
 }
 console.log(makeNoise());
+
+let globalVariable = 7; // Global Scope
+if (true) {
+    let value = 17; // Block Scope
+    var value2 = 19; // Global Scope
+    console.log(value);
+}
+console.log(globalVariable, value2)
+
+// Some exersies
+// 1. sum of of two numbers
+// problem: Write a function sum(a, b) that returns the sum of two numbers
+
+function getSum(a, b){
+    return a + b;
+}
+console.log(getSum(7, 7));
+
+//2 maximum number
+function findMax(arr) {
+    let max_ = -Infinity;
+    for (let i = 0; i < arr.length; i += 1){
+        if (arr[i] > max_){
+            max_ = arr[i];
+        }
+    }
+    return max_
+}
+
+console.log(findMax([1, 5, 3, 9, 2])); // Output: 9
+console.log(findMax([-5, -2, -8, -1])); // Output: -1
+
+// counting vowels in a string
+function countVowels(str) {
+    const vowels = "aeiou";
+    let count = 0;
+    for (let i = 0; i < str.length; i += 1){
+        if (vowels.includes(str[i].toLowerCase())) {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels("hello")); // Output: 2
+console.log(countVowels("Javascript")); // Output: 3
+*/
+
+// Arrow Functions
+const square = x => x*x;
+console.log(square(7));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

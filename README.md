@@ -26,4 +26,5 @@
 
 
 #### Day 1: solved 9 problem solved (8 easy 1 medium)
+#### Day 2: done basic of JS again loops functions(8)
 
