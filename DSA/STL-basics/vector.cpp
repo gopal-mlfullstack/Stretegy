@@ -1,7 +1,8 @@
 
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
+#include <string>
 using namespace std;
 
 int main() {
@@ -48,6 +49,7 @@ int main() {
 
     //-----------
     // Common operations
+    /*
     vector <int> v;
 
     // Adding element at the end
@@ -93,6 +95,97 @@ int main() {
         cout << x << " ";
     }
     cout << endl;
+    */
+
+    ///-------------------------------------
+    // String-Text Manipualtion
+    /*
+    string s = "Gopal";
+    // Common Operations
+    cout << "Size " << s.size() << endl; // or s.length()- returns length
+    cout << "Access Character(G) using index " << s[0] << endl;
+
+    // adding character to the end
+    s.push_back('!');
+    cout << "String " << s << endl;
+
+    // removing last element
+    s.pop_back();
+    cout << "String after removing ! " << s <<endl;
+
+    // substring: arguments are (start, length)
+    // s.substr(0, 3);
+    // cout << "Substring here: " << endl;
+    // cout << s.substr(0, 100) << endl;
+    // cout << s.find("p") << endl;
+
+
+    // Taking input
+    // string name;
+    // cout << "Enter your name: ";
+    // cin >> name; // this reads a line until space
+    // cout << "Hello " << name << endl;
+
+    // taking input sentences
+    // string thoughts;
+    // cout << "What's you are thinking! ";
+    // getline(cin, thoughts);
+    // cout << "Your thoughts: " << thoughts << endl;
+
+    */
+
+    ///----------------------------------
+    // Working With Sorting
+    /*
+    vector<int> v = {32, 7, 12, 2, 1};
+    cout << "Original Array: " << endl;
+    for (int x: v){
+        cout << x << " ";
+    }
+    cout << endl;
+    // sort in accending order
+    sort(v.begin(), v.end());
+
+    cout << "Sorted Version: " << endl;
+    for (int x: v){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    //sort in descending order
+    sort(v.begin(), v.end(), greater<int>());
+    cout << "Descending Order: " << endl;
+    for (int x: v){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    //Sort array
+    int arr[] = {5, 2, 8, 1};
+    sort(arr, arr + 4);
+
+    for (int x: arr){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    // Sorting string (alphabetically)
+    string s = "hello";
+    cout << "Original String: " << endl;
+    for (int i = 0; i < s.size(); i++){
+        cout << s[i] << "";
+    }
+    cout << endl;
+    sort(s.begin(), s.end());
+    cout << "Sorted (alphabetically): " << endl;
+    for (int i = 0; i < s.size(); i++){
+        cout << s[i] << "";
+    }
+    cout << endl;
+    */
+
+    //
+
 
 
 
