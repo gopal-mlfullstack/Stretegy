@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Projects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      button {
+        padding: 8px 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background-color: #0073e6;
+        color: white;
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #005bb5;
+      }
+
+      #result {
+        font-weight: bold;
+        margin-top: 6px;
+      }
+
+      input {
+        padding: 6px;
+        font-size: 14px;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><strong>YouTube Subscribe Button</strong></p>
+    <button id="sub-btn">Subscribe</button>
+
+    <br /><br />
+
+    <p><strong>Rock Paper Scissors</strong></p>
+    <p>
+      <a href="https://g-rockpaperscissors.netlify.app/" target="_blank"
+        >Click Here</a
+      >
+    </p>
+
+    <p><strong>Amazon Shipping Calculator</strong></p>
+    <p>Order under $40 → +$10 shipping</p>
+    <p>Order $40 or more → FREE shipping</p>
+
+    <input type="number" id="cost" placeholder="Cost of order" />
+    <button id="cal-btn">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+      //YouTube Subscribe Button
+      const subBtn = document.querySelector("#sub-btn");
+
+      subBtn.addEventListener("click", () => {
+        const isSubscribed = subBtn.textContent.toLowerCase() === "subscribed";
+        subBtn.textContent = isSubscribed ? "Subscribe" : "Subscribed";
+        subBtn.style.backgroundColor = isSubscribed ? "#0073e6" : "gray";
+      });
+
+      //Amazon Shipping Calculator
+      const calBtn = document.querySelector("#cal-btn");
+      const costInput = document.querySelector("#cost");
+      const result = document.querySelector("#result");
+
+      calBtn.addEventListener("click", () => {
+        const cost = Number(costInput.value);
+
+        if (isNaN(cost) || cost <= 0) {
+          result.textContent = "❌ Please enter a valid amount!";
+          result.style.color = "red";
+          return;
+        }
+
+        let total = cost < 40 ? cost + 10 : cost;
+        const message =
+          cost < 40
+            ? `Total: $${total.toFixed(2)} (includes $10 shipping)`
+            : `Total: $${total.toFixed(2)} (free shipping 🎉)`;
+
+        result.textContent = message;
+        result.style.color = "green";
+      });
+    </script>
+  </body>
+</html>
