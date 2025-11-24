@@ -178,7 +178,45 @@ console.log(countVowels("Javascript")); // Output: 3
 const square = x => x*x;
 console.log(square(7));
 
+function  mutlipier(factor){
+    return number => number * factor
 
+}
+
+const twice = mutlipier(2);
+console.log(twice(5));
+
+// Recursion
+
+/*
+It is perfectly okay for a function to call itself, as long as it doesn't often that it overflows the stack. A function that calls itself is called recursive .
+Recursion allows some functions to be written in a different style. Take, for example, this power function, which does the same as ** (expontentiation) operator:
+*/
+
+function power( base, exponent) {
+    if (exponent == 0){
+        return 1;
+    } else {
+        return  base * power(base, exponent - 1);
+    }
+}
+
+console.log(power(7, 2));
+
+function findSolution(target) {
+    function find(current, history){
+        if (current == target) {
+            return history; //found solution
+        } else if ( current > target) {
+            return null; // to big, we need to stop explore
+        } else {
+            return find(current + 5, `${history} + 5`) ?? find(current * 3, `${history} * 3`);
+        }
+    }
+    return find(1, "1"); // start from 1
+}
+
+console.log(findSolution(24)); //(((1 * 3) + 5) * 3)
 
 
 

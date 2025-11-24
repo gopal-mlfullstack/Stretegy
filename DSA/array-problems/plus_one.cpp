@@ -36,7 +36,7 @@ vector<int> plus_one(vector<int>& digits){
 
 
 int main(){
-    vector<int> digits = {9, 9, 9};
+    vector<int> digits = {2, 9, 9};
     plus_one(digits);
     cout << "Plus one: ";
     for (int digit: digits){

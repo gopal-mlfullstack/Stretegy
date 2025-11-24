@@ -3,6 +3,7 @@
 const result = document.getElementById("result");
 const score = document.getElementById("score");
 const buttons = document.querySelectorAll("button");
+const reset = document.getElementById("reset");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -15,6 +16,14 @@ buttons.forEach((button) => {
     const winner = getWinner(playerChoice, computerChoice);
     showResult(playerChoice, computerChoice, winner);
   });
+});
+
+// reset
+reset.addEventListener("click", () => {
+  playerScore = 0;
+  computerScore = 0;
+  result.textContent = "Game reset! Let's play again";
+  score.textContent = `Score: You ${playerScore} - ${computerScore} Computer`;
 });
 
 // function to get random computer choices
@@ -46,7 +55,7 @@ function showResult(player, computer, winner) {
     result.textContent = `It's a draw! You both chose: ${player}`;
   } else if (winner === "player") {
     result.textContent = `You win! ${player} beats ${computer}`;
-  } else {
+  } else if (winner === "computer") {
     result.textContent = `Computer Wins! ${computer} beats ${player}`;
   }
   score.textContent = `Score: You ${playerScore} - ${computerScore} Computer`;

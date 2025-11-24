@@ -43,6 +43,20 @@ int arraySum(int* arr, int size) {
     return sum_elements;
 }
 
+void reverseArray(int* arr, int size){
+    start = 0;
+    end = arr.size() - 1;
+
+    while (start < end){
+        temp = arr[start];
+        arr[start] = arr[end];
+        arr[start] = temp;
+        start++;
+        end--;
+    }
+    return arr;
+}
+
 int main(){
 
     // Three Core concepts
@@ -147,8 +161,10 @@ int main(){
 
     ///// Level 4: Arrays and Pointers
     //problem9: Array sum:
-    vector<int> numbers = {1, 2, 3, 4, 5};
-    cout << "Sum is: " << arraySum(numbers.data(), numbers.size()) << endl;
+    // vector<int> numbers = {1, 2, 3, 4, 5};
+    // cout << "Sum is: " << arraySum(numbers.data(), numbers.size()) << endl;
+
+
 
 
 

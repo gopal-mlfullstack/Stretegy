@@ -1,5 +1,5 @@
 // This file contains the actual profile data
-import { ProfileData } from "../types/profile.types";
+import type { ProfileData } from "../types/profile.types";
 
 export const profileData: ProfileData = {
   name: "Sarah Johnson",
