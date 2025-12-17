@@ -30,3 +30,15 @@ function greet(name) {
   console.log("Hello " + name);
 }
 greet("Gopal"); // this function will return Hello Gopal
+
+// passing a function as a argument
+function doSomething(callback) {
+  console.log("Doing something...");
+  callback(); // execute the function we received
+}
+
+function sayDone() {
+  console.log("Done!");
+}
+
+doSomething(sayDone);
