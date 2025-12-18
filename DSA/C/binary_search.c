@@ -16,6 +16,7 @@ int binary_search(int arr[], int n, int target){
         else if (arr[mid] < target){
             start = mid + 1;
         }
+        return -1;
 
     }
 
@@ -25,7 +26,7 @@ int binary_search(int arr[], int n, int target){
 
 
 int main(){
-    int arr[] = {1, 5, 9, 90, 100}, n = sizeof(arr) / sizeof(arr[0]), target = 90;
+    int arr[] = {1, 4, 7, 9, 600, 8000}, n = sizeof(arr) / sizeof(arr[0]), target = 600;
 
     printf("%d", binary_search(arr, n, target));
 
